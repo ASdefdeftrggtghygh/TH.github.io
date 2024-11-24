@@ -53,12 +53,12 @@ body {
 /* محتوى البلوكات */
 .hero-section .content {
     position: absolute;
-    bottom: 20%; /* رفع المحتوى من أسفل الصفحة */
+    top: 10%; /* نقل النصوص إلى الأعلى */
     left: 20px; /* محاذاة النص لليسار */
     color: white;
     font-family: 'Arial', sans-serif;
-    text-align: left; /* محاذاة النص لليسار */
-    max-width: 80%; /* تحديد الحد الأقصى للعرض */
+    text-align: left;
+    max-width: 80%;
 }
 
 /* تنسيق النصوص */
@@ -73,30 +73,34 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     margin-bottom: 10px;
     line-height: 1;
-  }
-  
-  .hero-section h1.rp {
-    font-size: 3em; /* حجم أصغر لـ RP */
-    color: #ff6200; /* لون مميز لـ RP */
-    margin-top: 0; /* إزالة المسافة بين Mystery و RP */
-  }
-  
+}
+
+.hero-section h1.rp {
+    font-size: 3em;
+    color: #ff6200;
+    margin-top: 0;
+}
+
 .hero-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: 300;
 }
 
+/* الزر */
 .hero-section .btn {
     background-color: #ff6200;
     color: #fff;
-    padding: 15px 30px;
+    padding: 15px 50px; /* زيادة العرض لجعل الزر مستطيلاً */
     text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+    font-size: 1.2em; /* تقليص النص داخل الزر */
+    border-radius: 25px; /* الزوايا مستديرة لإعطاء الشكل المستطيل */
     transition: background-color 0.3s;
+    margin-bottom: 0; /* إزالة المسافة تحت الزر */
+    display: inline-block; /* الحفاظ على تصرف الزر كعنصر مستطيل */
 }
 
+/* تأثير عند تمرير الفأرة */
 .hero-section .btn:hover {
     background-color: #ff6200;
 }
@@ -104,40 +108,39 @@ body {
 /* تخصيص النصوص للأجهزة الصغيرة */
 @media (max-width: 768px) {
     .hero-section .content {
-        bottom: 10%; /* رفع المحتوى أكثر للأجهزة الصغيرة */
+        top: 10%; /* وضع النصوص في الأعلى */
         left: 10px; /* تقليص المسافة من اليسار */
         font-size: 1em;
     }
 
     .hero-section h1 {
-        font-size: 3em; /* تقليص حجم النص الكبير */
+        font-size: 3em;
     }
 
     .hero-section h2 {
-        font-size: 1.5em; /* تقليص حجم النص الصغير */
+        font-size: 1.5em;
     }
 
     .hero-section p {
-        font-size: 1.2em; /* تقليص حجم النص */
+        font-size: 1.2em;
     }
 
     .hero-section .btn {
-        font-size: 1em; /* تقليص حجم الزر */
+        font-size: 1em;
         padding: 10px 20px;
     }
 }
-
 
 /* القسم الأسود مع المربعات */
 .section {
     background-color: #111;
     padding: 50px 0;
     text-align: center;
-    margin-top: 20px; /* مسافة صغيرة بين المربعات والشريط العلوي */
+    margin-top: 20px;
 
     display: flex;
     flex-direction: column;
-    align-items: center; /* لتوسيط المربعات أفقياً */
+    align-items: center;
 }
 
 .section-title {
@@ -148,35 +151,24 @@ body {
 /* تصميم المربعات */
 .feature-box {
     background-color: #121212; /* نفس الخلفية للمربعات الحالية */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* إطار شفاف */
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0; /* زيادة المسافة بين المربعات */
+    padding: 15px; /* تصغير الحشو */
+    margin: 15px 0; /* تقليل المسافة بين المربعات */
     color: #fff;
     text-align: center;
-    width: 80%; /* عرض المربعات 80% من عرض الصفحة */
-    max-width: 600px; /* الحد الأقصى لعرض المربع */
+    width: 70%; /* تقليل العرض */
+    max-width: 500px; /* تصغير الحد الأقصى للعرض */
     display: flex;
     flex-direction: column;
-    align-items: center; /* لتوسيط المحتوى داخل المربع */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* لجعل المربعات مخفية في البداية */
+    transform: translateY(50px); /* لإضافة حركة تحرك المربع من الأسفل */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* التأثير عند الحركة */
 }
 
-.feature-box .icon {
-    font-size: 3em;
-    margin-bottom: 15px;
-}
-
-.feature-box h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.feature-box p {
-    font-size: 1em;
-    color: #ccc;
-}
-
-
-/* تأثير تحريك المربعات عند التمرير */
+/* تأثير الحركة عند التمرير */
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -189,39 +181,17 @@ body {
 }
 
 /* إضافة التأثير */
-@keyframes slideIn {
-    0% {
-      transform: translateY(-20px); /* بداية الحركة من فوق */
-      opacity: 0; /* يبدأ النص شفاف */
-    }
-    100% {
-      transform: translateY(0); /* الحركة إلى مكانها الطبيعي */
-      opacity: 1; /* النهاية: النص يظهر بشكل كامل */
-    }
-  }
-  
-  /* تطبيق الحركة على العنوان والنص داخل المربعات */
-  .feature-box h3, .feature-box p {
-    animation: slideIn 1s ease-out forwards; /* 1 ثانية، سهولة في الحركة، والاحتفاظ بالحالة النهائية */
-    opacity: 0; /* يبدأ النص شفاف */
-    transform: translateY(-20px); /* يبدأ النص من أعلى المربع */
-    transition: opacity 1s ease-out;
-  }
-  
-  .feature-box:hover h3, .feature-box:hover p {
+.feature-box.visible {
     opacity: 1;
-    transform: translateY(0);
-  }
-  
-
-/* إضافة الحركة عند التمرير للأسفل */
-.feature-box.show {
-    animation: slideUp 0.7s forwards;
+    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
 }
 
 /* تخصيص المربعات لأجهزة الجوال */
 @media (max-width: 768px) {
     .feature-box {
-        width: 90%; /* في الأجهزة الصغيرة ستكون المربعات أكبر */
+        width: 85%; /* تصغير أكبر للمربعات */
+        border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
     }
 }
+
+/* مراقبة التمرير باستخدام Intersection Observer */
