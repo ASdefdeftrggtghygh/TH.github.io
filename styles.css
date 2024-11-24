@@ -90,7 +90,7 @@ body {
 .hero-section .btn {
     background-color: #ff6200; /* لون الزر */
     color: #fff;
-    padding: 15px 40px; /* زيادة العرض والارتفاع لجعل الزر مستطيلاً */
+    padding: 15px 50px; /* زيادة العرض والارتفاع لجعل الزر مستطيلاً */
     text-decoration: none;
     font-size: 1.5em; /* حجم النص داخل الزر */
     border-radius: 0px; /* إزالة الزوايا المنحنية لجعلها حواف مستقيمة */
