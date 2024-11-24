@@ -1,13 +1,24 @@
-// مراقبة التمرير باستخدام Intersection Observer
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+// استدعاء المربعات (العناصر التي تريد تحريكها)
+const boxes = document.querySelectorAll('.feature-box');
+
+// التحقق عند التمرير (scroll)
+const handleScroll = () => {
+    boxes.forEach((box) => {
+        // الحصول على موقع المربع relative إلى الشاشة
+        const boxPosition = box.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;  // تحديد النقطة التي يبدأ منها التحريك (يمكنك تعديلها)
+
+        // إضافة كلاس visible عند تواجد العنصر في الشاشة
+        if (boxPosition < screenPosition) {
+            box.classList.add('visible');
+        } else {
+            box.classList.remove('visible');
         }
     });
-}, { threshold: 0.5 });
+};
 
-document.querySelectorAll('.feature-box').forEach(box => {
-    observer.observe(box);
-});
+// ربط حدث التمرير بالوظيفة
+window.addEventListener('scroll', handleScroll);
+
+// التمرير الأولي عند تحميل الصفحة
+handleScroll();
