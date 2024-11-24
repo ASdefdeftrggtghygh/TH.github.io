@@ -64,3 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+.carousel {
+  width: 300px; /* عرض الحاوية */
+  overflow: hidden; /* إخفاء البطاقات الخارجة عن الحاوية */
+  margin: 50px auto; /* توسيط الحاوية */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex; /* ترتيب البطاقات أفقياً */
+  transition: transform 0.5s ease-in-out; /* تأثير انسيابي للتحريك */
+}
+
+.card {
+  min-width: 300px; /* عرض البطاقة */
+  padding: 20px;
+  border: 2px solid #ff6200;
+  border-radius: 15px;
+  background: #1e1e1e;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
