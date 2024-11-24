@@ -87,19 +87,21 @@
     font-weight: 300;
 }
 
+/* تعديل تنسيق الزر ليكون مستطيلًا نحيفًا */
 .hero-section .btn {
     background-color: #ff6200; /* لون الزر */
     color: #fff;
-    padding: 10px 20px; /* تحديد حجم الزر ليكون مربعًا صغيرًا */
+    padding: 8px 30px; /* جعل الزر نحيفًا وأطول */
     text-decoration: none;
     font-size: 1.2em; /* حجم النص داخل الزر */
-    border-radius: 5px; /* حواف الزر مستديرة قليلاً */
+    border-radius: 20px; /* حواف الزر مستديرة قليلاً */
     transition: background-color 0.3s; /* تأثير عند التمرير */
-    margin-bottom: 0; /* إزالة المسافة تحت الزر */
     display: inline-block; /* التأكد من أن الزر يبقى في نفس السطر */
+    margin-bottom: 0; /* إزالة المسافة تحت الزر */
+    font-weight: bold; /* جعل النص داخل الزر بالخط العريض */
 }
 
-
+/* تغيير اللون عند التمرير على الزر */
 .hero-section .btn:hover {
     background-color: #e55a00; /* تغيير اللون عند التمرير */
 }
