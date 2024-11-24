@@ -1,5 +1,5 @@
- /* إعدادات عامة للصفحة */
- body {
+  /* إعدادات عامة للصفحة */
+  body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@
 
 /* الخلفية والنصوص */
 .hero-section {
-    background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310132647749488680/20241024_130616.png?ex=67441b9c&is=6742ca1c&hm=e9fda118cc16046ec57bac3664c50690120f004e369bd501cc36de04942fd62f&=&format=webp&quality=lossless&width=1411&height=471'); /* ضع هنا رابط خلفيتك */
+    background-image: url('https://media.discordapp.net/attachments/1309070345352773664/1310230676288700416/20241024_130800.png?ex=674476e8&is=67432568&hm=2cadf7dbb22af93c31bed64be8ecca07dc4351fb28eb9e1eb075af45dd10e107&=&format=webp&quality=lossless&width=1179&height=663'); /* ضع هنا رابط خلفيتك */
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -133,23 +133,21 @@
 
 /* القسم الأسود مع المربعات */
 .section {
-    background-color: #000000;
+    background-image: url('https://media.discordapp.net/attachments/1309070345352773664/1310232333193838652/2D91A172-9FE0-4F38-86A6-2268265AF91C.jpg?ex=67447873&is=674326f3&hm=07e607f7a798339550c661ea5b8bdd043db01011e7ec172cca5946b19b7475ff&=&format=webp&width=1179&height=663'); /* إضافة صورة خلفية للشاشة السوداء */
+    background-size: cover; /* التأكد من أن الصورة تغطي كامل المساحة */
+    background-position: center; /* وضع الصورة في المركز */
     padding: 50px 0;
     text-align: center;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.section-title {
-    font-size: 1em; /* تكبير النص */
-    margin-bottom: 15px;
+    color: white; /* التأكد من أن النصوص بيضاء لتظهر بوضوح */
 }
 
 /* تصميم المربعات */
 .feature-box {
-    background-color: #000000; /* نفس الخلفية للمربعات الحالية */
+    background: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة للمربعات كي تبرز النصوص */
     border: 2px solid rgba(255, 255, 255, 0.2); /* إطار شفاف */
     border-radius: 15px; /* تكبير الحواف */
     padding: 30px; /* تكبير الحشو */
@@ -176,6 +174,20 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* إضافة التأثير */
+.feature-box.visible {
+    opacity: 1;
+    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
+}
+
+/* تخصيص المربعات لأجهزة الجوال */
+@media (max-width: 768px) {
+    .feature-box {
+        width: 85%; /* تصغير أكبر للمربعات */
+        border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
     }
 }
 
