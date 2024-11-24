@@ -1,369 +1,125 @@
-  /* إعدادات عامة للصفحة */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background-color: #1e1e1e;
-    overflow-x: hidden;
-}
-
-/* الشريط العلوي */
-.header {
-    display: flex;
-    justify-content: flex-start; /* جعل المحتوى على اليسار */
-    align-items: center;
-    padding: 20px;
-    background-color: #111;
-}
-
-/* حاوية الشعار والشخطات */
-.menu-logo-container {
-    display: flex;
-    align-items: center;
-}
-
-/* الشخطات */
-.menu-icon div {
-    width: 30px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-}
-
-/* الشعار */
-.logo {
-    height: 50px;
-    margin-left: 10px; /* مسافة بين الشخطات والشعار */
-}
-
-/* الخلفية والنصوص */
-.hero-section {
-    background-image: url('https://media.discordapp.net/attachments/1309070345352773664/1310230676288700416/20241024_130800.png?ex=674476e8&is=67432568&hm=2cadf7dbb22af93c31bed64be8ecca07dc4351fb28eb9e1eb075af45dd10e107&=&format=webp&quality=lossless&width=1179&height=663'); /* ضع هنا رابط خلفيتك */
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-/* محتوى البلوكات */
-.hero-section .content {
-    position: absolute;
-    top: 10%; /* نقل النصوص إلى الأعلى */
-    left: 20px; /* محاذاة النص لليسار */
-    color: white;
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-    max-width: 80%;
-}
-
-/* تنسيق النصوص */
-.hero-section p {
-    font-size: 1em; /* تكبير النص */
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.hero-section h1 {
-    font-size: 5em; /* تكبير الخط */
-    font-family: 'Chakra Petch', sans-serif;
-    margin-bottom: 10px;
-    line-height: 1;
-}
-
-.hero-section h1.rp {
-    font-size: 4em; /* تكبير الخط */
-    color: #ff6200;
-    margin-top: 0;
-}
-
-.hero-section h2 {
-    font-size: 3em; /* تكبير الخط */
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.hero-section .btn {
-    background-color: #ff6200; /* لون الزر */
-    color: #fff;
-    padding: 10px 20px; /* تحديد حجم الزر ليكون مربعًا صغيرًا */
-    text-decoration: none;
-    font-size: 1.2em; /* حجم النص داخل الزر */
-    border-radius: 5px; /* حواف الزر مستديرة قليلاً */
-    transition: background-color 0.3s; /* تأثير عند التمرير */
-    margin-bottom: 0; /* إزالة المسافة تحت الزر */
-    display: inline-block; /* التأكد من أن الزر يبقى في نفس السطر */
-}
-
-
-.hero-section .btn:hover {
-    background-color: #e55a00; /* تغيير اللون عند التمرير */
-}
-
-/* تخصيص النصوص للأجهزة الصغيرة */
-@media (max-width: 768px) {
-    .hero-section .content {
-        top: 10%; /* وضع النصوص في الأعلى */
-        left: 10px; /* تقليص المسافة من اليسار */
-        font-size: 1em; /* تكبير النصوص */
-    }
-
-    .hero-section h1 {
-        font-size: 4em; /* تكبير الخط */
-    }
-
-    .hero-section h2 {
-        font-size: 2.5em; /* تكبير الخط */
-    }
-
-    .hero-section p {
-        font-size: 1em; /* تكبير النص */
-    }
-
-    .hero-section .btn {
-        font-size: 1.5em; /* تكبير الزر */
-        padding: 15px 30px; /* تكبير الزر */
-        margin-bottom: 0; /* إزالة المسافة تحت الزر في الجوال */
-    }
-}
-
-/* القسم الأسود مع المربعات */
-.section {
-    background-image: url('https://media.discordapp.net/attachments/1309070345352773664/1310232333193838652/2D91A172-9FE0-4F38-86A6-2268265AF91C.jpg?ex=67447873&is=674326f3&hm=07e607f7a798339550c661ea5b8bdd043db01011e7ec172cca5946b19b7475ff&=&format=webp&width=1179&height=663'); /* إضافة صورة خلفية للشاشة السوداء */
-    background-size: cover; /* التأكد من أن الصورة تغطي كامل المساحة */
-    background-position: center; /* وضع الصورة في المركز */
-    padding: 50px 0;
-    text-align: center;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white; /* التأكد من أن النصوص بيضاء لتظهر بوضوح */
-}
-
-/* تصميم المربعات */
-.feature-box {
-    background: rgba(0, 0, 0, 0.5); /* خلفية شبه شفافة للمربعات كي تبرز النصوص */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* إطار شفاف */
-    border-radius: 15px; /* تكبير الحواف */
-    padding: 30px; /* تكبير الحشو */
-    margin: 25px 0; /* تقليل المسافة بين المربعات */
-    color: #fff;
-    text-align: center;
-    width: 75%; /* زيادة عرض المربعات */
-    max-width: 550px; /* زيادة الحد الأقصى للعرض */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.7); /* زيادة الظل */
-    opacity: 0; /* إخفاء المربعات في البداية */
-    transform: translateY(50px); /* تحريك المربعات للأعلى بداية */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* التأثير عند الحركة */
-}
-
-/* تأثير الحركة عند التمرير */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* إضافة التأثير */
-.feature-box.visible {
-    opacity: 1;
-    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
-}
-
-/* تخصيص المربعات لأجهزة الجوال */
-@media (max-width: 768px) {
-    .feature-box {
-        width: 85%; /* تصغير أكبر للمربعات */
-        border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
-    }
-}
-
-/* إضافة التأثير */
-.feature-box.visible {
-    opacity: 1;
-    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
-}
-
-/* تخصيص المربعات لأجهزة الجوال */
-@media (max-width: 768px) {
-    .feature-box {
-        width: 85%; /* تصغير أكبر للمربعات */
-        border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
-    }
-}
-
-/* إعدادات الـ Carousel */
-.carousel {
-    position: relative;
-    width: 300px; /* عرض البطاقة */
-    overflow: hidden;
-    margin: 20px auto;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlaw RP</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- إضافة الخطوط من Google Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&display=swap');
+    </style>
+</head>
+<body>
+    <!-- الشعار والشخطات في مكان معين -->
+    <div class="menu-logo-container">
+      <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img class="logo" src="https://media.discordapp.net/attachments/1309902409568620725/1309945460051415170/IMG_1956.png?ex=67441607&is=6742c487&hm=6d067521c9ee1ea037836177a3ec0d0ab12345bfa3414100a5d5fd483aac1b9d&=&format=webp&quality=lossless&width=384&height=384" alt="Logo">
+    </div>
   
-  .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
+    <!-- الخلفية والنصوص -->
+    <div class="hero-section">
+      <div class="content">
+        <p>Play • Earn • Enjoy</p>
+        <h1>Mystery</h1>
+        <h1 class="rp">RP</h1>        
+        <h2>FiveM</h2>
+        <a href="#" class="btn">Join Us</a>
+      </div>
+    </div>
   
-  .card {
-    min-width: 100%; /* كل بطاقة تأخذ كامل العرض */
-    box-sizing: border-box;
-    padding: 20px;
-    border: 2px solid #ff6200;
-    border-radius: 15px;
-    background: #0f0f0f;
-    text-align: center;
-    opacity: 0; /* إخفاء البطاقات في البداية */
-    transform: translateY(50px); /* تحريك البطاقات للأسفل */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* تأثير عند التحرك */
-  }
-  
-  .card.visible {
-    opacity: 1; /* جعل البطاقة مرئية */
-    transform: translateY(0); /* تحرك البطاقة للأعلى */
-  }
-  
-  .card-content h2 {
-    color: #ff8b07;
-    margin: 10px 0;
-  }
-  
-  .card-content p {
-    color: #ccc;
-  }
-  
-/* تحديث الـ Image Container */
-.card-image {
-    width: 200px; /* عرض الصورة */
-    height: 200px; /* ارتفاع الصورة */
-    border: 2px solid #ff8800; /* لون الإطار */
-    clip-path: polygon(
-      10% 0%, 90% 0%, /* الخط العلوي */
-      100% 10%, 100% 90%, /* الجانب الأيمن */
-      90% 100%, 10% 100%, /* الخط السفلي */
-      0% 90%, 0% 10% /* الجانب الأيسر */
-    ); /* تحديد الشكل المخصص */
-    margin: auto; /* لتوسيط الصورة */
-    background-size: cover; /* لملء الصورة داخل الإطار */
-    background-position: center;
-    overflow: hidden; /* إخفاء أي جزء زائد */
-  }
-  
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* لضبط الصورة بشكل مثالي داخل المربع */
-  }
+    <!-- القسم الأسود مع المربعات -->
+    <div class="section" id="features">
+      <h2 class="section-title">Get To Know Us</h2>
+      <div class="feature-box">
+        <div class="icon">🔄</div>
+        <h3>Industry Best Support</h3>
+        <p>Receive immediate, 24/7 assistance from our in-house team, responding in under 90 seconds.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">⚙️</div>
+        <h3>Advanced Scripts</h3>
+        <p>Experience smooth and innovative gameplay with our custom scripts, enhancing interaction and realism.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">💰</div>
+        <h3>Earn Rewards</h3>
+        <p>Earn in-game rewards for your achievements, making your gaming experience even more exciting.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">🚀</div>
+        <h3>Community Support</h3>
+        <p>Stay connected with a community that values teamwork and collaboration, fostering friendships and shared experiences.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">🚗</div>
+        <h3>Custom Vehicles</h3>
+        <p>Enhance your gameplay with a variety of customizable vehicles, tailored to suit your roleplay needs.</p>
+      </div>
+      <div class="feature-box">
+        <div class="icon">⚙️</div>
+        <h3>Advanced Tools</h3>
+        <p>Access state-of-the-art tools designed to enrich your roleplay experience and streamline your interactions.</p>
+      </div>
+
+
+      <div class="team-container">
+        <h1></span>Our Team</span></h1>
+        <div class="carousel">
+          <div class="carousel-track">
+            <!-- البطاقة الأولى -->
+            <div class="card">
+              <div class="card-content">
+                <div class="image-container">
+                  <img src="https://images-ext-1.discordapp.net/external/kZCOAPJhonU-78eF6G2fynAD6dwcSsOIbX0L6LFmU2o/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1026931857574600784/260b26cba2ac662dc3b8935f5c21b568.webp?format=webp&width=384&height=384" alt="Member Image">
+                </div>
+                <h2>Abo turkui</h2>
+                <p>Owner</p>
+              </div>
+            </div>
+            <!-- البطاقة الثانية -->
+            <div class="card">
+              <div class="card-content">
+                <div class="image-container">
+                  <img src="team2.png" alt="Member Image">
+                </div>
+                <h2>TEAM 2</h2>
+                <p>Co-Owner</p>
+              </div>
+            </div>
+            <!-- يمكنك إضافة المزيد من البطاقات -->
+          </div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
       
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    background: #555;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    background: #00ffff;
-  }
-  
-  .card-content h2 {
-    color: #ff6200;
-    margin: 10px 0;
-    position: relative;
-  }
-  
-  /* إضافة خط فوق كلمة "Our" */
-  .card-content h2 span {
-    text-decoration: overline;  /* إضافة الخط فوق النص */
-    padding-top: 5px;  /* إضافة مسافة بين النص والخط */
-  }
-  
-
-  .contact-section {
-    background-color: #111; /* لون الخلفية */
-    color: white; /* لون النص */
-    padding: 40px 20px; /* مسافة داخلية */
-    margin-top: 20px; /* مسافة بين الأقسام */
-    border-radius: 15px; /* حواف مستديرة */
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5); /* ظل للقسم */
-    position: relative; /* لتثبيت الأيقونات أسفل القسم */
-}
-
-.contact-section h2 {
-    font-size: 2.5em; /* حجم العنوان */
-    margin-bottom: 15px; /* مسافة تحت العنوان */
-    font-family: 'Chakra Petch', sans-serif;
-    text-align: center; /* توسيط النص */
-}
-
-.contact-section p {
-    font-size: 1.2em; /* حجم النص */
-    line-height: 1.6; /* ارتفاع السطر */
-    margin-bottom: 40px; /* مسافة أسفل النص */
-    font-family: 'Arial', sans-serif;
-    text-align: center; /* توسيط النص */
-    color: rgba(255, 255, 255, 0.6); /* نص شفاف قليلاً */
-}
-
-.contact-section a {
-    color: #ff6200; /* لون الروابط */
-    text-decoration: none; /* إزالة الخط السفلي */
-    font-weight: bold;
-}
-
-.contact-section a:hover {
-    color: #ff8b07; /* لون عند التمرير */
-}
-
-/* إعداد الأيقونات */
-.social-icons {
-    display: flex;
-    justify-content: flex-start; /* لجعل الأيقونات تبدأ من اليسار */
-    gap: 15px; /* مسافة بين الأيقونات */
-    position: relative; /* وضع طبيعي */
-}
-
-.contact-section .social-icons {
-    margin-top: 30px; /* مسافة إضافية بين النص والأيقونات */
-}
-
-.social-icons a {
-    display: inline-block;
-    background-color: #1e1e1e; /* خلفية دائرية */
-    padding: 15px; /* مسافة داخلية حول الأيقونة */
-    border-radius: 50%; /* حواف دائرية */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثير عند التمرير */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); /* ظل للأيقونات */
-}
-
-.social-icons a:hover {
-    transform: scale(1.1); /* تكبير بسيط عند التمرير */
-    background-color: #333; /* تغيير الخلفية عند التمرير */
-}
-
-.social-icons img.icon {
-    width: 30px; /* حجم الشعار */
-    height: 30px; /* حجم الشعار */
-    object-fit: contain; /* التأكد من ملء المساحة بدون قص */
-}
+      <div class="contact-section">
+        <h2>Stay up to date</h2>
+        <p>
+            Have questions or feedback? We'd love to hear from you. Reach out to our team or our Discord: 
+            <a href="https://discord.gg/0lrp" target="_blank"></a>
+        </p>
+        <div class="social-icons">
+            <a href="https://discord.gg/wS6e2Rz4" target="_blank">
+                <img src="https://media.discordapp.net/attachments/1308462904571334777/1310221864685277274/IMG_1975.png?ex=67446eb3&is=67431d33&hm=f2b646cf5a979a6918a41afb6ce95389bded04a82ba7853a985953603b55adf2&=&format=webp&quality=lossless&width=663&height=663" alt="Discord" class="icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://media.discordapp.net/attachments/1308462904571334777/1310223355575799838/IMG_1985.png?ex=67447016&is=67431e96&hm=0b2a58854304af47a2a995a9f4d2cf1ddc186d1d7b6cde339999f402573b713a&=&format=webp&quality=lossless&width=619&height=663" alt="Twitter" class="icon">
+            </a>
+            <a href="https://example.com" target="_blank">
+                <img src="https://media.discordapp.net/attachments/1308462904571334777/1310221101699174490/IMG_1973.png?ex=67446dfd&is=67431c7d&hm=48e5dec0c2090525d742aab38d7bcc51eff23a5394f9fa6b7851a72f4382afac&=&format=webp&quality=lossless&width=663&height=663" alt="Elliot" class="icon">
+            </a>
+        </div>
+    </div>
+                
+    <script src="script.js"></script>
+  </body>
+  </html>
