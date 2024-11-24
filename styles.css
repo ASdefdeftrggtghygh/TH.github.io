@@ -63,7 +63,7 @@ body {
 
 /* تنسيق النصوص */
 .hero-section p {
-    font-size: 2em; /* تكبير النص */
+    font-size: 1em; /* تكبير النص */
     font-weight: 400;
     letter-spacing: 1px;
 }
@@ -107,7 +107,7 @@ body {
     .hero-section .content {
         top: 10%; /* وضع النصوص في الأعلى */
         left: 10px; /* تقليص المسافة من اليسار */
-        font-size: 1.5em; /* تكبير النصوص */
+        font-size: 1em; /* تكبير النصوص */
     }
 
     .hero-section h1 {
@@ -119,7 +119,7 @@ body {
     }
 
     .hero-section p {
-        font-size: 1.5em; /* تكبير النص */
+        font-size: 1em; /* تكبير النص */
     }
 
     .hero-section .btn {
@@ -131,7 +131,7 @@ body {
 
 /* القسم الأسود مع المربعات */
 .section {
-    background-color: #111;
+    background-color: #000000;
     padding: 50px 0;
     text-align: center;
     margin-top: 20px;
@@ -141,8 +141,8 @@ body {
 }
 
 .section-title {
-    font-size: 3.5em; /* تكبير النص */
-    margin-bottom: 20px;
+    font-size: 1em; /* تكبير النص */
+    margin-bottom: 15px;
 }
 
 /* تصميم المربعات */
