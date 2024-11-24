@@ -11,7 +11,7 @@ body {
 /* الشريط العلوي */
 .header {
     display: flex;
-    justify-content: flex-start; /* جعل المحتوى على اليسار */
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
     background-color: #111;
@@ -39,7 +39,7 @@ body {
 
 /* الخلفية والنصوص */
 .hero-section {
-    background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310132647749488680/20241024_130616.png?ex=67441b9c&is=6742ca1c&hm=e9fda118cc16046ec57bac3664c50690120f004e369bd501cc36de04942fd62f&=&format=webp&quality=lossless&width=1411&height=471'); /* ضع هنا رابط خلفيتك */
+    background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310132647749488680/20241024_130616.png?ex=67441b9c&is=6742ca1c&hm=e9fda118cc16046ec57bac3664c50690120f004e369bd501cc36de04942fd62f&=&format=webp&quality=lossless&width=1411&height=471');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -53,8 +53,8 @@ body {
 /* محتوى البلوكات */
 .hero-section .content {
     position: absolute;
-    top: 10%; /* نقل النصوص إلى الأعلى */
-    left: 20px; /* محاذاة النص لليسار */
+    top: 10%;
+    left: 20px;
     color: white;
     font-family: 'Arial', sans-serif;
     text-align: left;
@@ -91,13 +91,13 @@ body {
 .hero-section .btn {
     background-color: #ff6200;
     color: #fff;
-    padding: 15px 50px; /* زيادة العرض لجعل الزر مستطيلاً */
+    padding: 15px 50px;
     text-decoration: none;
-    font-size: 1.2em; /* تقليص النص داخل الزر */
-    border-radius: 25px; /* الزوايا مستديرة لإعطاء الشكل المستطيل */
+    font-size: 1.2em;
+    border-radius: 25px;
     transition: background-color 0.3s;
     margin-bottom: 0; /* إزالة المسافة تحت الزر */
-    display: inline-block; /* الحفاظ على تصرف الزر كعنصر مستطيل */
+    display: inline-block;
 }
 
 /* تأثير عند تمرير الفأرة */
@@ -108,8 +108,8 @@ body {
 /* تخصيص النصوص للأجهزة الصغيرة */
 @media (max-width: 768px) {
     .hero-section .content {
-        top: 10%; /* وضع النصوص في الأعلى */
-        left: 10px; /* تقليص المسافة من اليسار */
+        top: 10%;
+        left: 10px;
         font-size: 1em;
     }
 
@@ -134,15 +134,6 @@ body {
     .hero-section {
         padding-bottom: 0;
     }
-
-    /* الحفاظ على إظهار المربعات في الجوال */
-    .feature-box {
-        opacity: 1; /* تأكيد ظهور المربعات */
-        transform: translateY(0); /* إزالة أي حركة للأسفل */
-        width: 90%; /* زيادة العرض للمربعات على الجوال */
-        max-width: none; /* إزالة الحد الأقصى للعرض */
-        margin: 10px 0; /* تقليل المسافة بين المربعات */
-    }
 }
 
 /* القسم الأسود مع المربعات */
@@ -151,7 +142,6 @@ body {
     padding: 50px 0;
     text-align: center;
     margin-top: 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,46 +154,28 @@ body {
 
 /* تصميم المربعات */
 .feature-box {
-    background-color: #121212; /* نفس الخلفية للمربعات الحالية */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* إطار شفاف */
+    background-color: #121212; 
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    padding: 15px; /* تصغير الحشو */
-    margin: 15px 0; /* تقليل المسافة بين المربعات */
+    padding: 15px;
+    margin: 15px 0;
     color: #fff;
     text-align: center;
-    width: 70%; /* تقليل العرض */
-    max-width: 500px; /* تصغير الحد الأقصى للعرض */
+    width: 70%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    opacity: 0; /* لجعل المربعات مخفية في البداية */
-    transform: translateY(50px); /* لإضافة حركة تحرك المربع من الأسفل */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* التأثير عند الحركة */
-}
-
-/* تأثير الحركة عند التمرير */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* إضافة التأثير */
-.feature-box.visible {
-    opacity: 1;
-    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
+    opacity: 1; /* ضمان ظهور المربعات */
+    transform: translateY(0); /* التأكد من ظهور المربعات بدون أي حركة */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* تخصيص المربعات لأجهزة الجوال */
 @media (max-width: 768px) {
     .feature-box {
-        width: 85%; /* تصغير أكبر للمربعات */
-        border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
+        width: 85%; /* زيادة العرض للمربعات على الجوال */
+        border: 2px solid rgba(255, 255, 255, 0.3); /* وضوح الإطار على الجوال */
     }
 }
