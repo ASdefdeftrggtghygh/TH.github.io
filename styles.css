@@ -39,10 +39,10 @@ body {
 
 /* الخلفية والنصوص */
 .hero-section {
-    background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310197452024053760/IMG_1966.png?ex=674457f6&is=67430676&hm=c9ee5413ea34bc634d96b741ca8e37db01faa6d3d53a7a019fab2ae6baf6786a&=&format=webp&quality=lossless&width=649&height=525'); /* ضع هنا رابط خلفيتك */
+    background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310132647749488680/20241024_130616.png?ex=67441b9c&is=6742ca1c&hm=e9fda118cc16046ec57bac3664c50690120f004e369bd501cc36de04942fd62f&=&format=webp&quality=lossless&width=1411&height=471'); /* ضع هنا رابط خلفيتك */
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    height:90vh;
     display: flex;
     justify-content: center;
     align-items: center;
