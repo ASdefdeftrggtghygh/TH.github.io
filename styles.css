@@ -63,26 +63,26 @@ body {
 
 /* تنسيق النصوص */
 .hero-section p {
-    font-size: 1.5em;
+    font-size: 2em; /* تكبير النص */
     font-weight: 400;
     letter-spacing: 1px;
 }
 
 .hero-section h1 {
-    font-size: 4em;
+    font-size: 5em; /* تكبير الخط */
     font-family: 'Chakra Petch', sans-serif;
     margin-bottom: 10px;
     line-height: 1;
 }
 
 .hero-section h1.rp {
-    font-size: 3em;
+    font-size: 4em; /* تكبير الخط */
     color: #ff6200;
     margin-top: 0;
 }
 
 .hero-section h2 {
-    font-size: 2em;
+    font-size: 3em; /* تكبير الخط */
     margin-bottom: 20px;
     font-weight: 300;
 }
@@ -90,11 +90,12 @@ body {
 .hero-section .btn {
     background-color: #ff6200;
     color: #fff;
-    padding: 15px 30px;
+    padding: 20px 40px; /* تكبير الزر */
     text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+    font-size: 1.5em; /* تكبير النص داخل الزر */
+    border-radius: 10px;
     transition: background-color 0.3s;
+    margin-bottom: 0; /* إزالة المسافة تحت الزر */
 }
 
 .hero-section .btn:hover {
@@ -106,24 +107,25 @@ body {
     .hero-section .content {
         top: 10%; /* وضع النصوص في الأعلى */
         left: 10px; /* تقليص المسافة من اليسار */
-        font-size: 1em;
+        font-size: 1.5em; /* تكبير النصوص */
     }
 
     .hero-section h1 {
-        font-size: 3em;
+        font-size: 4em; /* تكبير الخط */
     }
 
     .hero-section h2 {
-        font-size: 1.5em;
+        font-size: 2.5em; /* تكبير الخط */
     }
 
     .hero-section p {
-        font-size: 1.2em;
+        font-size: 1.5em; /* تكبير النص */
     }
 
     .hero-section .btn {
-        font-size: 1em;
-        padding: 10px 20px;
+        font-size: 1.5em; /* تكبير الزر */
+        padding: 15px 30px; /* تكبير الزر */
+        margin-bottom: 0; /* إزالة المسافة تحت الزر في الجوال */
     }
 }
 
@@ -133,35 +135,52 @@ body {
     padding: 50px 0;
     text-align: center;
     margin-top: 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 3.5em; /* تكبير النص */
     margin-bottom: 30px;
 }
 
 /* تصميم المربعات */
 .feature-box {
-    background-color: #121212; /* نفس الخلفية للمربعات الحالية */
+    background-color: #000000; /* نفس الخلفية للمربعات الحالية */
     border: 2px solid rgba(255, 255, 255, 0.2); /* إطار شفاف */
-    border-radius: 10px;
-    padding: 15px; /* تصغير الحشو */
-    margin: 15px 0; /* تقليل المسافة بين المربعات */
+    border-radius: 15px; /* تكبير الحواف */
+    padding: 30px; /* تكبير الحشو */
+    margin: 25px 0; /* تقليل المسافة بين المربعات */
     color: #fff;
     text-align: center;
-    width: 70%; /* تقليل العرض */
-    max-width: 500px; /* تصغير الحد الأقصى للعرض */
+    width: 75%; /* زيادة عرض المربعات */
+    max-width: 550px; /* زيادة الحد الأقصى للعرض */
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    opacity: 0; /* جعل المربعات مخفية في البداية */
-    transform: translateY(20px); /* جعل المربعات تبدأ من أسفل */
-    animation: slideIn 0.8s forwards; /* إضافة تأثير التحريك */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.7); /* زيادة الظل */
+    opacity: 0; /* إخفاء المربعات في البداية */
+    transform: translateY(50px); /* تحريك المربعات للأعلى بداية */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* التأثير عند الحركة */
+}
+
+/* تأثير الحركة عند التمرير */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* إضافة التأثير */
+.feature-box.visible {
+    opacity: 1;
+    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
 }
 
 /* تخصيص المربعات لأجهزة الجوال */
@@ -172,14 +191,4 @@ body {
     }
 }
 
-/* إضافة تأثير الحركة للمربعات */
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* مراقبة التمرير باستخدام Intersection Observer */
