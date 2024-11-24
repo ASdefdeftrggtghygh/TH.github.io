@@ -88,18 +88,19 @@ body {
 }
 
 .hero-section .btn {
-    background-color: #ff6200;
+    background-color: #ff6200; /* لون الزر */
     color: #fff;
-    padding: 20px 40px; /* تكبير الزر */
+    padding: 15px 40px; /* زيادة العرض والارتفاع لجعل الزر مستطيلاً */
     text-decoration: none;
-    font-size: 1.5em; /* تكبير النص داخل الزر */
-    border-radius: 10px;
-    transition: background-color 0.3s;
+    font-size: 1.5em; /* حجم النص داخل الزر */
+    border-radius: 0px; /* إزالة الزوايا المنحنية لجعلها حواف مستقيمة */
+    transition: background-color 0.3s; /* تأثير عند التمرير */
     margin-bottom: 0; /* إزالة المسافة تحت الزر */
+    display: inline-block; /* التأكد من أن الزر يبقى في نفس السطر */
 }
 
 .hero-section .btn:hover {
-    background-color: #ff6200;
+    background-color: #e55a00; /* تغيير اللون عند التمرير */
 }
 
 /* تخصيص النصوص للأجهزة الصغيرة */
