@@ -159,28 +159,6 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-    opacity: 0; /* لجعل المربعات مخفية في البداية */
-    transform: translateY(50px); /* لإضافة حركة تحرك المربع من الأسفل */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* التأثير عند الحركة */
-}
-
-/* تأثير الحركة عند التمرير */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* إضافة التأثير */
-.feature-box.visible {
-    opacity: 1;
-    transform: translateY(0); /* عند ظهور المربع يتحرك للأعلى */
-    animation: slideUp 0.6s ease-out; /* إضافة حركة النص */
 }
 
 /* تخصيص المربعات لأجهزة الجوال */
@@ -190,5 +168,3 @@ body {
         border: 2px solid rgba(255, 255, 255, 0.3); /* زيادة وضوح الإطار */
     }
 }
-
-/* مراقبة التمرير باستخدام Intersection Observer */
