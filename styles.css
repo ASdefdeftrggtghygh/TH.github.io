@@ -42,7 +42,7 @@ body {
     background-image: url('https://media.discordapp.net/attachments/1309902409568620725/1310197452024053760/IMG_1966.png?ex=674457f6&is=67430676&hm=c9ee5413ea34bc634d96b741ca8e37db01faa6d3d53a7a019fab2ae6baf6786a&=&format=webp&quality=lossless&width=649&height=525'); /* ضع هنا رابط خلفيتك */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
